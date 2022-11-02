@@ -1,0 +1,33 @@
+name: PlayerTrade
+version: '${project.version}'
+main: vip.fubuki.bukkit.PlayerTrade
+api-version: 1.15
+depend: [ XiaoMingMinecraft,NBTAPI ]
+authors: [ mlus ]
+description: A plugin made player can trade with each other through XiaoMing bot
+
+commands:
+  sell:
+    description: sell items in your hands to XiaoMingBot.
+    usage: /<command> <price> <amount>
+    permission: <plugin name>.sell
+    permission-message: 仅玩家可执行该命令.
+  buy:
+    description: buy items from XiaoMingBot.
+    usage: /<command> <ID> <amount>
+    permission: <plugin name>.buy
+    permission-message: 仅玩家可执行该命令.
+permissions:
+  <plugin name>.*:
+    description: Gives access to all trade commands
+    children:
+      <plugin name>.sell: true
+      <plugin name>.buy: true
+  <plugin name>.sell:
+    description: Sell items to XiaoMingBot
+    default: true
+  <plugin name>.buy:
+    description: Buy items from XiaoMingBot
+    default: true
+
+
