@@ -30,13 +30,13 @@ public class ExtendProtocolListener
         if (map.get("Result")!=null) {
             if ("DENIED".equals(map.get("Result").toString())) {
                 Objects.requireNonNull(player).sendMessage("请求失败,当前服务器配置未允许进行商店操作");
-                if (map.get("RequestType").toString().equals("sell")) {
+                if ("sell".equals(map.get("RequestType").toString())) {
                         getItem(map,player);
                 }
             }
             else if ("ACCEPT".equals(map.get("Result").toString())) {
                     player.sendMessage("请求成功.");
-                    if(map.get("RequestType").toString().equals("buy")){
+                    if("buy".equals(map.get("RequestType").toString())){
                        getItem(map,player);
                     }
             }

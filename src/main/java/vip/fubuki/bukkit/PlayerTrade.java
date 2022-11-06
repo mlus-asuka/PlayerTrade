@@ -4,7 +4,6 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import vip.fubuki.bukkit.command.BuyCommandExecutor;
 import vip.fubuki.bukkit.command.CarriageCommandExecutor;
-import vip.fubuki.bukkit.command.ggtest;
 import vip.fubuki.bukkit.listener.ExtendProtocolListener;
 
 import java.util.Objects;
@@ -39,3 +38,4 @@ public final class PlayerTrade extends JavaPlugin {
     }
 
 }
+

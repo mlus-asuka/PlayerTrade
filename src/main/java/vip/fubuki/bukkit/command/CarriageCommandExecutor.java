@@ -4,6 +4,7 @@ import cn.chuanwise.xiaoming.minecraft.bukkit.XMMCBukkitPlugin;
 import cn.chuanwise.xiaoming.minecraft.bukkit.net.Client;
 import cn.chuanwise.xiaoming.minecraft.bukkit.net.XMMCClientContact;
 import de.tr7zw.nbtapi.NBTItem;
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -86,7 +87,7 @@ public class CarriageCommandExecutor implements CommandExecutor {
             nbt=nbt.replace(",","~");
             nbt=nbt.replace(":","$");
             nbt=nbt.replace("\"","%");
-            map.put("NBT",nbt);
+            map.put("ItemNBT",nbt);
             map.put("RequestType","sell");
             map.put("price", price);
             map.put("amount",amount);
