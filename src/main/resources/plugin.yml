@@ -17,6 +17,16 @@ commands:
     usage: /<command> <ID> <amount>
     permission: <plugin name>.buy
     permission-message: 仅玩家可执行该命令.
+  daka:
+    description: Sign up.
+    usage: /<command>
+    permission: <plugin name>.daka
+    permission-message: 仅玩家可执行该命令.
+  qiandao:
+    description: Sign up.
+    usage: /<command>
+    permission: <plugin name>.daka
+    permission-message: 仅玩家可执行该命令.
 permissions:
   <plugin name>.*:
     description: Gives access to all trade commands
@@ -29,5 +39,7 @@ permissions:
   <plugin name>.buy:
     description: Buy items from XiaoMingBot
     default: true
-
+  <plugin name>.daka:
+    description: Sign up
+    default: true
 

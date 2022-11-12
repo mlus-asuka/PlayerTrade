@@ -4,6 +4,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 import vip.fubuki.bukkit.command.BuyCommandExecutor;
 import vip.fubuki.bukkit.command.CarriageCommandExecutor;
+import vip.fubuki.bukkit.command.SignCommandExecutor;
 import vip.fubuki.bukkit.listener.ExtendProtocolListener;
 
 import java.util.Objects;
@@ -28,6 +29,8 @@ public final class PlayerTrade extends JavaPlugin {
     public void onEnable() {
         Objects.requireNonNull(this.getCommand("sell")).setExecutor(new CarriageCommandExecutor());
         Objects.requireNonNull(this.getCommand("buy")).setExecutor(new BuyCommandExecutor());
+        Objects.requireNonNull(this.getCommand("daka")).setExecutor(new SignCommandExecutor());
+        Objects.requireNonNull(this.getCommand("qiandao")).setExecutor(new SignCommandExecutor());
         getServer().getPluginManager().registerEvents(ExtendProtocolListener.getInstance(), this);
         Bukkit.getConsoleSender().sendMessage("§3PlayerTrade Loaded.");
     }
